@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		521E8B30AD0923DA59C3D7F8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB005934681443804C7F8EA8 /* libPods.a */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
+		A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D31D82B06D00273310 /* TJCacheClient.m */; };
+		A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D71D82B43900273310 /* TJExampleViewController.m */; };
 		A88FC4791D8167EC004D74FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4781D8167EC004D74FE /* main.m */; };
 		A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC47B1D8167EC004D74FE /* AppDelegate.m */; };
-		A88FC47F1D8167EC004D74FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC47E1D8167EC004D74FE /* ViewController.m */; };
 		A88FC4821D8167EC004D74FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FC4801D8167EC004D74FE /* Main.storyboard */; };
 		A88FC4841D8167EC004D74FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88FC4831D8167EC004D74FE /* Assets.xcassets */; };
 		A88FC4871D8167EC004D74FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FC4851D8167EC004D74FE /* LaunchScreen.storyboard */; };
@@ -24,12 +25,14 @@
 		28C77F23388F8A7BC07E6A03 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A80BF6B91D816D9C00808C9B /* TJKeyedArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKeyedArchive.h; sourceTree = "<group>"; };
 		A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKeyedArchive.m; sourceTree = "<group>"; };
+		A85E56D21D82B06D00273310 /* TJCacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCacheClient.h; sourceTree = "<group>"; };
+		A85E56D31D82B06D00273310 /* TJCacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCacheClient.m; sourceTree = "<group>"; };
+		A85E56D61D82B43900273310 /* TJExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJExampleViewController.h; sourceTree = "<group>"; };
+		A85E56D71D82B43900273310 /* TJExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJExampleViewController.m; sourceTree = "<group>"; };
 		A88FC4741D8167EC004D74FE /* TJCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FC4781D8167EC004D74FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A88FC47A1D8167EC004D74FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A88FC47B1D8167EC004D74FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A88FC47D1D8167EC004D74FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A88FC47E1D8167EC004D74FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A88FC4811D8167EC004D74FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A88FC4831D8167EC004D74FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A88FC4861D8167EC004D74FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +67,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A85E56D11D82B05700273310 /* TJCacheClient */ = {
+			isa = PBXGroup;
+			children = (
+				A85E56D21D82B06D00273310 /* TJCacheClient.h */,
+				A85E56D31D82B06D00273310 /* TJCacheClient.m */,
+			);
+			name = TJCacheClient;
+			sourceTree = "<group>";
+		};
+		A85E56D51D82B28700273310 /* TJFMDBClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TJFMDBClient;
+			sourceTree = "<group>";
+		};
 		A88FC46B1D8167EC004D74FE = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +104,13 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
+				A85E56D51D82B28700273310 /* TJFMDBClient */,
+				A85E56D11D82B05700273310 /* TJCacheClient */,
 				A88FC4971D816801004D74FE /* Cache */,
 				A88FC47A1D8167EC004D74FE /* AppDelegate.h */,
 				A88FC47B1D8167EC004D74FE /* AppDelegate.m */,
-				A88FC47D1D8167EC004D74FE /* ViewController.h */,
-				A88FC47E1D8167EC004D74FE /* ViewController.m */,
+				A85E56D61D82B43900273310 /* TJExampleViewController.h */,
+				A85E56D71D82B43900273310 /* TJExampleViewController.m */,
 				A88FC4801D8167EC004D74FE /* Main.storyboard */,
 				A88FC4831D8167EC004D74FE /* Assets.xcassets */,
 				A88FC4851D8167EC004D74FE /* LaunchScreen.storyboard */,
@@ -254,8 +275,9 @@
 			files = (
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A88FC4951D8167FD004D74FE /* TJFileManager.m in Sources */,
-				A88FC47F1D8167EC004D74FE /* ViewController.m in Sources */,
+				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
+				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
@@ -372,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
