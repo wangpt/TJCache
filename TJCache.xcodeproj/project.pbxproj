@@ -19,6 +19,7 @@
 		A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC48F1D8167FD004D74FE /* TJUserDefaults.m */; };
 		A88FC4951D8167FD004D74FE /* TJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4911D8167FD004D74FE /* TJFileManager.m */; };
 		A88FC49A1D816812004D74FE /* TJCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4991D816812004D74FE /* TJCache.m */; };
+		A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		A88FC4911D8167FD004D74FE /* TJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFileManager.m; sourceTree = "<group>"; };
 		A88FC4981D816812004D74FE /* TJCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCache.h; sourceTree = "<group>"; };
 		A88FC4991D816812004D74FE /* TJCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCache.m; sourceTree = "<group>"; };
+		A8C748C41D87D0BF00B5F947 /* TJNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkCache.h; sourceTree = "<group>"; };
+		A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkCache.m; sourceTree = "<group>"; };
 		BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DB005934681443804C7F8EA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +107,7 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
+				A8C748C31D87D01100B5F947 /* TJNetworkCache */,
 				A85E56D51D82B28700273310 /* TJFMDBClient */,
 				A85E56D11D82B05700273310 /* TJCacheClient */,
 				A88FC4971D816801004D74FE /* Cache */,
@@ -141,6 +145,15 @@
 				A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */,
 			);
 			name = Cache;
+			sourceTree = "<group>";
+		};
+		A8C748C31D87D01100B5F947 /* TJNetworkCache */ = {
+			isa = PBXGroup;
+			children = (
+				A8C748C41D87D0BF00B5F947 /* TJNetworkCache.h */,
+				A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */,
+			);
+			name = TJNetworkCache;
 			sourceTree = "<group>";
 		};
 		D61CF0194383BB54552A81DD /* Pods */ = {
@@ -279,6 +292,7 @@
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
+				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
 			);
@@ -394,7 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,7 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TJCache/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";

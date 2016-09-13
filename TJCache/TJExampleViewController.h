@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define alert(msg) [[[UIAlertView alloc]initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil] show]
 
 @interface TJExampleViewController : UITableViewController
 
