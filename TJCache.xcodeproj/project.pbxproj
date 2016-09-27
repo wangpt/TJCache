@@ -17,9 +17,9 @@
 		A88FC4841D8167EC004D74FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88FC4831D8167EC004D74FE /* Assets.xcassets */; };
 		A88FC4871D8167EC004D74FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88FC4851D8167EC004D74FE /* LaunchScreen.storyboard */; };
 		A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC48F1D8167FD004D74FE /* TJUserDefaults.m */; };
-		A88FC4951D8167FD004D74FE /* TJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4911D8167FD004D74FE /* TJFileManager.m */; };
 		A88FC49A1D816812004D74FE /* TJCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4991D816812004D74FE /* TJCache.m */; };
 		A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */; };
+		A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D64A671D98C5750001CB63 /* TJFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,12 @@
 		A88FC4881D8167EC004D74FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A88FC48E1D8167FD004D74FE /* TJUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJUserDefaults.h; sourceTree = "<group>"; };
 		A88FC48F1D8167FD004D74FE /* TJUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJUserDefaults.m; sourceTree = "<group>"; };
-		A88FC4901D8167FD004D74FE /* TJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFileManager.h; sourceTree = "<group>"; };
-		A88FC4911D8167FD004D74FE /* TJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFileManager.m; sourceTree = "<group>"; };
 		A88FC4981D816812004D74FE /* TJCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCache.h; sourceTree = "<group>"; };
 		A88FC4991D816812004D74FE /* TJCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCache.m; sourceTree = "<group>"; };
 		A8C748C41D87D0BF00B5F947 /* TJNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkCache.h; sourceTree = "<group>"; };
 		A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkCache.m; sourceTree = "<group>"; };
+		A8D64A661D98C5750001CB63 /* TJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFileManager.h; sourceTree = "<group>"; };
+		A8D64A671D98C5750001CB63 /* TJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFileManager.m; sourceTree = "<group>"; };
 		BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DB005934681443804C7F8EA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,8 +139,8 @@
 				A88FC4991D816812004D74FE /* TJCache.m */,
 				A88FC48E1D8167FD004D74FE /* TJUserDefaults.h */,
 				A88FC48F1D8167FD004D74FE /* TJUserDefaults.m */,
-				A88FC4901D8167FD004D74FE /* TJFileManager.h */,
-				A88FC4911D8167FD004D74FE /* TJFileManager.m */,
+				A8D64A661D98C5750001CB63 /* TJFileManager.h */,
+				A8D64A671D98C5750001CB63 /* TJFileManager.m */,
 				A80BF6B91D816D9C00808C9B /* TJKeyedArchive.h */,
 				A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */,
 			);
@@ -194,11 +194,12 @@
 		A88FC46C1D8167EC004D74FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "王朋涛";
 				TargetAttributes = {
 					A88FC4731D8167EC004D74FE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 972X3T23HN;
 					};
 				};
 			};
@@ -287,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
-				A88FC4951D8167FD004D74FE /* TJFileManager.m in Sources */,
 				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
@@ -295,6 +295,7 @@
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
+				A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +335,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -378,8 +381,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -407,6 +412,7 @@
 			baseConfigurationReference = BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 972X3T23HN;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -420,6 +426,7 @@
 			baseConfigurationReference = 28C77F23388F8A7BC07E6A03 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 972X3T23HN;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

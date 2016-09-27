@@ -58,7 +58,7 @@
     //读取数据到各个label中
     //读取整型int类型的数据
     NSInteger myInteger = [userDefaultes integerForKey:@"myInteger"];
-    NSLog(@"txtInteger:%@",[NSString stringWithFormat:@"%d",myInteger]);
+    NSLog(@"txtInteger:%@",[NSString stringWithFormat:@"%ld",(long)myInteger]);
     //读取浮点型float类型的数据
     float myFloat = [userDefaultes floatForKey:@"myFloat"];
     NSLog(@"txtFloat:%@",[NSString stringWithFormat:@"%f",myFloat]);
@@ -92,7 +92,7 @@
 
     //读取字典类型NSDictionary类型的数据
     NSDictionary *myDictionary = [userDefaultes dictionaryForKey:@"myDictionary"];
-    NSString *myDicString = [NSString stringWithFormat:@"name:%@, age:%d",[myDictionary valueForKey:@"name"], [[myDictionary valueForKey:@"age"] integerValue]];
+    NSString *myDicString = [NSString stringWithFormat:@"name:%@, age:%ld",[myDictionary valueForKey:@"name"], [[myDictionary valueForKey:@"age"] integerValue]];
     NSLog(@"txtNSDictionary=%@",myDicString);
 }
 
