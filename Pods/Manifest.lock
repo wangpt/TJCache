@@ -5,16 +5,19 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - SSKeychain (1.4.1)
   - YYCache (1.0.3)
 
 DEPENDENCIES:
   - FMDB (~> 2.6.2)
   - MagicalRecord (~> 2.3.2)
+  - SSKeychain (~> 1.4.1)
   - YYCache (~> 1.0.3)
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
 
 COCOAPODS: 0.39.0

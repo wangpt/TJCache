@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7BADA97E3B6C2D46A9D782B3'
-               BlueprintName = 'YYCache'
+               BlueprintIdentifier = '51336005DA81D0020E6FA4EC'
+               BlueprintName = 'SSKeychain'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libYYCache.a'>
+               BuildableName = 'libSSKeychain.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

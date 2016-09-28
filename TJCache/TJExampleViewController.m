@@ -9,6 +9,7 @@
 #import "TJExampleViewController.h"
 #import "TJFileManager.h"
 #import "TJCacheClient.h"
+
 static NSString *const TJButtonName = @"TJButtonName";
 static NSString *const TJButtonInfo = @"TJButtonInfo";
 static NSString *const TJNotificationText = @"TJNotificationText";
@@ -37,8 +38,9 @@ static NSString *const TJNotificationText = @"TJNotificationText";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"%@",[TJFileManager pathForDocumentsDirectory]);
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.93 green:0.93 blue:0.95 alpha:1.0];
+
+    
+    
 }
 #pragma mark UITableViewDataSource
 
@@ -74,7 +76,9 @@ static NSString *const TJNotificationText = @"TJNotificationText";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.93 green:0.93 blue:0.95 alpha:1.0];
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TJExampleViewController.h"
+#import "TJKeychain.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,9 +22,11 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:
                                       [[TJExampleViewController alloc] initWithStyle:UITableViewStyleGrouped]];
+    [self.window makeKeyAndVisible];
+//    [TJKeychain saveAccount:@"111" andPassword:@"333"];
+    NSLog(@"%@",[TJKeychain readAccount:@"111"]);
     return YES;
 }
 

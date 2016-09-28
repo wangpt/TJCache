@@ -19,6 +19,7 @@
 		A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC48F1D8167FD004D74FE /* TJUserDefaults.m */; };
 		A88FC49A1D816812004D74FE /* TJCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4991D816812004D74FE /* TJCache.m */; };
 		A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */; };
+		A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D11B791D9B9B5700439B9E /* TJKeychain.m */; };
 		A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D64A671D98C5750001CB63 /* TJFileManager.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		A88FC4991D816812004D74FE /* TJCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCache.m; sourceTree = "<group>"; };
 		A8C748C41D87D0BF00B5F947 /* TJNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkCache.h; sourceTree = "<group>"; };
 		A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkCache.m; sourceTree = "<group>"; };
+		A8D11B781D9B9B5700439B9E /* TJKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKeychain.h; sourceTree = "<group>"; };
+		A8D11B791D9B9B5700439B9E /* TJKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKeychain.m; sourceTree = "<group>"; };
 		A8D64A661D98C5750001CB63 /* TJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFileManager.h; sourceTree = "<group>"; };
 		A8D64A671D98C5750001CB63 /* TJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFileManager.m; sourceTree = "<group>"; };
 		BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
+				A8D11B771D9B9B1A00439B9E /* TJKeychain */,
 				A8C748C31D87D01100B5F947 /* TJNetworkCache */,
 				A85E56D51D82B28700273310 /* TJFMDBClient */,
 				A85E56D11D82B05700273310 /* TJCacheClient */,
@@ -154,6 +158,15 @@
 				A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */,
 			);
 			name = TJNetworkCache;
+			sourceTree = "<group>";
+		};
+		A8D11B771D9B9B1A00439B9E /* TJKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				A8D11B781D9B9B5700439B9E /* TJKeychain.h */,
+				A8D11B791D9B9B5700439B9E /* TJKeychain.m */,
+			);
+			name = TJKeychain;
 			sourceTree = "<group>";
 		};
 		D61CF0194383BB54552A81DD /* Pods */ = {
@@ -288,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
+				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
 				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
