@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface TJKeychain : NSObject
-+ (void)saveAccount:(NSString *)email andPassword:(NSString *)password;
+//保存密码到秘钥
++ (BOOL)saveAccount:(NSString *)email andPassword:(NSString *)password;
+//读取
 + (NSString *)readAccount:(NSString *)email;
+//删除
++ (BOOL)deleteAccount:(NSString *)email;
 @end
