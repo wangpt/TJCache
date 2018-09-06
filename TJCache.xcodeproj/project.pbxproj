@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521E8B30AD0923DA59C3D7F8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB005934681443804C7F8EA8 /* libPods.a */; };
+		2B2CD84C21416E7E00E36A03 /* ExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CD84A21416E7E00E36A03 /* ExampleController.m */; };
+		2B2CD84D21416E7E00E36A03 /* TJCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */; };
+		2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0ED21416C5000008BBA /* PersonModel.m */; };
+		2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
 		A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D31D82B06D00273310 /* TJCacheClient.m */; };
 		A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D71D82B43900273310 /* TJExampleViewController.m */; };
@@ -21,10 +24,20 @@
 		A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C748C51D87D0BF00B5F947 /* TJNetworkCache.m */; };
 		A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D11B791D9B9B5700439B9E /* TJKeychain.m */; };
 		A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D64A671D98C5750001CB63 /* TJFileManager.m */; };
+		B54A71D6E5C56A1E07F7ABA3 /* libPods-TJCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2133A1E74CEA93E02C9B68 /* libPods-TJCache.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28C77F23388F8A7BC07E6A03 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2B2CD84821416E7D00E36A03 /* TJCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCacheManager.h; sourceTree = "<group>"; };
+		2B2CD84921416E7E00E36A03 /* ExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleController.h; sourceTree = "<group>"; };
+		2B2CD84A21416E7E00E36A03 /* ExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleController.m; sourceTree = "<group>"; };
+		2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCacheManager.m; sourceTree = "<group>"; };
+		2BAAF0ED21416C5000008BBA /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoModel.h; sourceTree = "<group>"; };
+		2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoModel.m; sourceTree = "<group>"; };
+		2BAAF0F021416C5000008BBA /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.release.xcconfig"; sourceTree = "<group>"; };
+		4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.debug.xcconfig"; sourceTree = "<group>"; };
 		A80BF6B91D816D9C00808C9B /* TJKeyedArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKeyedArchive.h; sourceTree = "<group>"; };
 		A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKeyedArchive.m; sourceTree = "<group>"; };
 		A85E56D21D82B06D00273310 /* TJCacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCacheClient.h; sourceTree = "<group>"; };
@@ -49,8 +62,7 @@
 		A8D11B791D9B9B5700439B9E /* TJKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKeychain.m; sourceTree = "<group>"; };
 		A8D64A661D98C5750001CB63 /* TJFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJFileManager.h; sourceTree = "<group>"; };
 		A8D64A671D98C5750001CB63 /* TJFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJFileManager.m; sourceTree = "<group>"; };
-		BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		DB005934681443804C7F8EA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2133A1E74CEA93E02C9B68 /* libPods-TJCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TJCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +70,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521E8B30AD0923DA59C3D7F8 /* libPods.a in Frameworks */,
+				B54A71D6E5C56A1E07F7ABA3 /* libPods-TJCache.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		42501E84C3D737ADE59D269F /* Frameworks */ = {
+		2B2CD83B21416CCD00E36A03 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				DB005934681443804C7F8EA8 /* libPods.a */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		2BAAF0EB21416C0900008BBA /* YYCacheClient */ = {
+			isa = PBXGroup;
+			children = (
+				2B2CD84921416E7E00E36A03 /* ExampleController.h */,
+				2B2CD84A21416E7E00E36A03 /* ExampleController.m */,
+				2B2CD84821416E7D00E36A03 /* TJCacheManager.h */,
+				2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */,
+				2BAAF0EC21416C3200008BBA /* Model */,
+			);
+			name = YYCacheClient;
+			sourceTree = "<group>";
+		};
+		2BAAF0EC21416C3200008BBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */,
+				2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */,
+				2BAAF0F021416C5000008BBA /* PersonModel.h */,
+				2BAAF0ED21416C5000008BBA /* PersonModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6AD1AF5AD5F81E4991A82494 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */,
+				45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C30F718962883661496FB61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED2133A1E74CEA93E02C9B68 /* libPods-TJCache.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,8 +145,8 @@
 			children = (
 				A88FC4761D8167EC004D74FE /* TJCache */,
 				A88FC4751D8167EC004D74FE /* Products */,
-				D61CF0194383BB54552A81DD /* Pods */,
-				42501E84C3D737ADE59D269F /* Frameworks */,
+				6AD1AF5AD5F81E4991A82494 /* Pods */,
+				6C30F718962883661496FB61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +161,8 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
+				2B2CD83B21416CCD00E36A03 /* Vendor */,
+				2BAAF0EB21416C0900008BBA /* YYCacheClient */,
 				A8D11B771D9B9B1A00439B9E /* TJKeychain */,
 				A8C748C31D87D01100B5F947 /* TJNetworkCache */,
 				A85E56D51D82B28700273310 /* TJFMDBClient */,
@@ -169,15 +222,6 @@
 			name = TJKeychain;
 			sourceTree = "<group>";
 		};
-		D61CF0194383BB54552A81DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */,
-				28C77F23388F8A7BC07E6A03 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,12 +229,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A88FC48B1D8167EC004D74FE /* Build configuration list for PBXNativeTarget "TJCache" */;
 			buildPhases = (
-				59DA94BB76E0CAB71367414D /* Check Pods Manifest.lock */,
+				DD650DBB257653099EA8D10C /* [CP] Check Pods Manifest.lock */,
 				A88FC4701D8167EC004D74FE /* Sources */,
 				A88FC4711D8167EC004D74FE /* Frameworks */,
 				A88FC4721D8167EC004D74FE /* Resources */,
-				7965B755F674C7612E25EADB /* Embed Pods Frameworks */,
-				10CB56CD5B567B187EC01DC7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +254,7 @@
 				TargetAttributes = {
 					A88FC4731D8167EC004D74FE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 972X3T23HN;
+						DevelopmentTeam = DQK8L5T84R;
 					};
 				};
 			};
@@ -248,49 +290,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10CB56CD5B567B187EC01DC7 /* Copy Pods Resources */ = {
+		DD650DBB257653099EA8D10C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TJCache-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59DA94BB76E0CAB71367414D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7965B755F674C7612E25EADB /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -300,6 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */,
+				2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */,
+				2B2CD84C21416E7E00E36A03 /* ExampleController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
 				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
@@ -309,6 +327,7 @@
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
+				2B2CD84D21416E7E00E36A03 /* TJCacheManager.m in Sources */,
 				A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,10 +442,10 @@
 		};
 		A88FC48C1D8167EC004D74FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD32CD8338E4549DF480030 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 972X3T23HN;
+				DEVELOPMENT_TEAM = DQK8L5T84R;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -437,10 +456,10 @@
 		};
 		A88FC48D1D8167EC004D74FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28C77F23388F8A7BC07E6A03 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 972X3T23HN;
+				DEVELOPMENT_TEAM = DQK8L5T84R;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
