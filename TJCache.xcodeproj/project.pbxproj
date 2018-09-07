@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B2CD84C21416E7E00E36A03 /* ExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CD84A21416E7E00E36A03 /* ExampleController.m */; };
-		2B2CD84D21416E7E00E36A03 /* TJCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */; };
 		2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0ED21416C5000008BBA /* PersonModel.m */; };
 		2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */; };
+		2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */; };
+		2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
 		A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D31D82B06D00273310 /* TJCacheClient.m */; };
 		A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D71D82B43900273310 /* TJExampleViewController.m */; };
@@ -28,14 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B2CD84821416E7D00E36A03 /* TJCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCacheManager.h; sourceTree = "<group>"; };
-		2B2CD84921416E7E00E36A03 /* ExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleController.h; sourceTree = "<group>"; };
-		2B2CD84A21416E7E00E36A03 /* ExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleController.m; sourceTree = "<group>"; };
-		2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCacheManager.m; sourceTree = "<group>"; };
 		2BAAF0ED21416C5000008BBA /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
 		2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoModel.h; sourceTree = "<group>"; };
 		2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoModel.m; sourceTree = "<group>"; };
 		2BAAF0F021416C5000008BBA /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoController.h; sourceTree = "<group>"; };
+		2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoController.m; sourceTree = "<group>"; };
+		2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoManager.h; sourceTree = "<group>"; };
+		2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoManager.m; sourceTree = "<group>"; };
 		45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.release.xcconfig"; sourceTree = "<group>"; };
 		4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.debug.xcconfig"; sourceTree = "<group>"; };
 		A80BF6B91D816D9C00808C9B /* TJKeyedArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKeyedArchive.h; sourceTree = "<group>"; };
@@ -87,11 +87,11 @@
 		2BAAF0EB21416C0900008BBA /* YYCacheClient */ = {
 			isa = PBXGroup;
 			children = (
-				2B2CD84921416E7E00E36A03 /* ExampleController.h */,
-				2B2CD84A21416E7E00E36A03 /* ExampleController.m */,
-				2B2CD84821416E7D00E36A03 /* TJCacheManager.h */,
-				2B2CD84B21416E7E00E36A03 /* TJCacheManager.m */,
 				2BAAF0EC21416C3200008BBA /* Model */,
+				2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */,
+				2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */,
+				2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */,
+				2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */,
 			);
 			name = YYCacheClient;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			files = (
 				2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */,
 				2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */,
-				2B2CD84C21416E7E00E36A03 /* ExampleController.m in Sources */,
+				2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
 				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
@@ -326,8 +326,8 @@
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
+				2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
-				2B2CD84D21416E7E00E36A03 /* TJCacheManager.m in Sources */,
 				A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@
 
 static NSString *const TJButtonName = @"TJButtonName";
 static NSString *const TJButtonInfo = @"TJButtonInfo";
-static NSString *const TJNotificationText = @"TJNotificationText";
+static NSString *const TJButtonSelector = @"TJButtonSelector";
 
 @interface TJExampleViewController ()
 @property (nonatomic, strong) NSArray *data;
@@ -23,15 +23,27 @@ static NSString *const TJNotificationText = @"TJNotificationText";
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"JDStatusBarNotification";
-        
-        self.data = @[@[@{TJButtonName:@"Show TJCache", TJButtonInfo:@"based on NSCache",
-                          TJNotificationText:@""},
-                        @{TJButtonName:@"Show TJUserDefaults", TJButtonInfo:@"based on NSUserDefaults", TJNotificationText:@""},
-                        @{TJButtonName:@"Show TJFileManager", TJButtonInfo:@"based on NSFileManager", TJNotificationText:@""},
-                        @{TJButtonName:@"Show TJKeyedArchive", TJButtonInfo:@"based on NSKeyedArchive", TJNotificationText:@""}],
-                      @[@{TJButtonName:@"Show TJCacheClien", TJButtonInfo:@"based on YYCache", TJNotificationText:@""}],
-                      @[@{TJButtonName:@"Show TJFMDBClien", TJButtonInfo:@"based on FMDB", TJNotificationText:@""}]];
+        self.title = @"TJCache";
+        self.data = @[@[@{TJButtonName:@"Show TJCache",
+                          TJButtonInfo:@"based on NSCache",
+                          TJButtonSelector:@""},
+                        @{TJButtonName:@"Show TJUserDefaults",
+                          TJButtonInfo:@"based on NSUserDefaults",
+                          TJButtonSelector:@""},
+                        @{TJButtonName:@"Show TJFileManager",
+                          TJButtonInfo:@"based on NSFileManager",
+                          TJButtonSelector:@""},
+                        @{TJButtonName:@"Show TJKeyedArchive",
+                          TJButtonInfo:@"based on NSKeyedArchive",
+                          TJButtonSelector:@""}],
+                      
+                      @[@{TJButtonName:@"Show TJCacheClien",
+                          TJButtonInfo:@"based on YYCache",
+                          TJButtonSelector:@"showYYCacaeDemo"}],
+                      
+                      @[@{TJButtonName:@"Show TJFMDBClien",
+                          TJButtonInfo:@"based on FMDB",
+                          TJButtonSelector:@""}]];
     }
     return self;
 }
@@ -75,7 +87,6 @@ static NSString *const TJNotificationText = @"TJNotificationText";
     }else{
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
     self.tableView.backgroundColor = [UIColor colorWithRed:0.93 green:0.93 blue:0.95 alpha:1.0];
     return cell;
     
@@ -87,10 +98,20 @@ static NSString *const TJNotificationText = @"TJNotificationText";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section==1) {
-
-        [self showOkayCancelActionSheet];
+        NSDictionary *data = self.data[indexPath.section][indexPath.row];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        NSString *selectorName = data[TJButtonSelector];
+        [self performSelector:NSSelectorFromString(selectorName) withObject:nil];
+#pragma clang diagnostic pop
     }
     
+}
+
+
+- (void)showYYCacaeDemo{
+    UIViewController *vc = [[NSClassFromString(@"YYCacheDemoController") alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)showOkayCancelActionSheet {
