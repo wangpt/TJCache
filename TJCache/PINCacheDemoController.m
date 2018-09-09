@@ -1,36 +1,34 @@
 //
-//  YYCacheDemoController.m
+//  PINCacheDemoController.m
 //  TJCache
 //
 //  Created by tao on 2018/9/7.
 //  Copyright © 2018年 王朋涛. All rights reserved.
 //
 
-#import "YYCacheDemoController.h"
+#import "PINCacheDemoController.h"
 #import "PersonModel.h"
-#import "YYCache.h"
-#import "YYCacheDemoManager.h"
-
-@implementation YYCacheExample
+#import "PINCacheDemoManager.h"
+@implementation PINCacheExample
 static NSString *const TJExampleName = @"TJExampleName";
 static NSString *const TJExampleData = @"TJExampleData";
 + (instancetype)exampleWithTitle:(NSString *)title selector:(NSString *)selector{
-    YYCacheExample *example = [[self class] new];
+    PINCacheExample *example = [[self class] new];
     example.title = title;
     example.selector = NSSelectorFromString(selector);
     return example;
 }
 @end
 
-@interface YYCacheDemoController ()<UITableViewDelegate, UITableViewDataSource>
+@interface PINCacheDemoController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *titles;
 
-
 @end
 
-@implementation YYCacheDemoController
+@implementation PINCacheDemoController
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -44,37 +42,35 @@ static NSString *const TJExampleData = @"TJExampleData";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"YYCacheDemo";
+    self.title = @"PINCacheDemo";
     self.titles = ({
         NSMutableArray *array = @[
                                   @{
                                       TJExampleName:@"同步",
                                       TJExampleData:@[
-                                              [YYCacheExample exampleWithTitle:@"新增数据"
+                                              [PINCacheExample exampleWithTitle:@"新增数据"
                                                                       selector:@"saveObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"删除数据"
+                                              [PINCacheExample exampleWithTitle:@"删除数据"
                                                                       selector:@"removeObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"修改数据"
+                                              [PINCacheExample exampleWithTitle:@"修改数据"
                                                                       selector:@"changeObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"查找数据"
+                                              [PINCacheExample exampleWithTitle:@"查找数据"
                                                                       selector:@"readObjectExample:"],
                                               ]
                                       },
-                                  /* 这里不能正确存储，还没找到具体原因
                                   @{
                                       TJExampleName:@"异步",
                                       TJExampleData:@[
-                                              [YYCacheExample exampleWithTitle:@"新增数据"
+                                              [PINCacheExample exampleWithTitle:@"新增数据"
                                                                        selector:@"saveAsynObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"删除数据"
+                                              [PINCacheExample exampleWithTitle:@"删除数据"
                                                                        selector:@"removeAsynObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"修改数据"
+                                              [PINCacheExample exampleWithTitle:@"修改数据"
                                                                        selector:@"changeAsynObjectExample:"],
-                                              [YYCacheExample exampleWithTitle:@"查找数据"
+                                              [PINCacheExample exampleWithTitle:@"查找数据"
                                                                        selector:@"readAsynObjectExample:"],
                                               ]
                                       },
-                                   */
                                   ].mutableCopy;
         array;
     });
@@ -102,7 +98,7 @@ static NSString *const TJExampleData = @"TJExampleData";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     NSDictionary *dic = (NSDictionary *)self.titles[indexPath.section];
     NSArray *array = dic[TJExampleData];
-    YYCacheExample *model = array[indexPath.row];
+    PINCacheExample *model = array[indexPath.row];
     cell.textLabel.text = model.title;
     return cell;
 }
@@ -119,14 +115,14 @@ static NSString *const TJExampleData = @"TJExampleData";
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     NSDictionary *dic = (NSDictionary *)self.titles[indexPath.section];
     NSArray *array = dic[TJExampleData];
-    YYCacheExample *example = array[indexPath.row];
+    PINCacheExample *example = array[indexPath.row];
     [self performSelector:example.selector withObject:nil];
 #pragma clang diagnostic pop
 }
 
 #pragma mark - Sync
 - (void)saveObjectExample:(id)sender{
-    if ([YYCacheDemoManager checkPerson]) {
+    if ([PINCacheDemoManager checkPerson]) {
         alert(@"本地数据已存在");
         return;
     }
@@ -135,131 +131,126 @@ static NSString *const TJExampleData = @"TJExampleData";
     cacheModel.infoModel = [PersonInfoModel new];;
     cacheModel.infoModel.sex = @"男";
     cacheModel.infoModel.age = 20;
-    cacheModel.infoModel.name = @"小明";
-    [[YYCacheDemoManager sharedManager] updataPersonObject:cacheModel];
+    cacheModel.infoModel.name = @"小A";
+    [[PINCacheDemoManager sharedManager] updataPersonObject:cacheModel];
     alert(@"保存成功");
 }
 
 - (void)removeObjectExample:(id)sender{
-    if (![YYCacheDemoManager checkPerson]) {
+    if (![PINCacheDemoManager checkPerson]) {
         alert(@"本地数据不存在");
         return;
     }
-    [[YYCacheDemoManager sharedManager] removePerson];
+    [[PINCacheDemoManager sharedManager] removePerson];
     alert(@"删除成功");
 }
 
 - (void)changeObjectExample:(id)sender{
-    if (![YYCacheDemoManager checkPerson]) {
+    if (![PINCacheDemoManager checkPerson]) {
         alert(@"本地数据不存在");
         return;
     }
-    PersonModel *cacheModel = [[YYCacheDemoManager sharedManager] readPerson];
-    if ([cacheModel.infoModel.name isEqualToString:@"小明"]) {
+    PersonModel *cacheModel = [[PINCacheDemoManager sharedManager] readPerson];
+    if ([cacheModel.infoModel.name isEqualToString:@"小A"]) {
         cacheModel.id = [NSNumber numberWithInteger:200];
         cacheModel.infoModel = [PersonInfoModel new];;
         cacheModel.infoModel.sex = @"女";
         cacheModel.infoModel.age = 18;
-        cacheModel.infoModel.name = @"小红";
+        cacheModel.infoModel.name = @"小C";
     }else{
         cacheModel.id = [NSNumber numberWithInteger:300];
         cacheModel.infoModel = [PersonInfoModel new];;
         cacheModel.infoModel.sex = @"男";
         cacheModel.infoModel.age = 20;
-        cacheModel.infoModel.name = @"小明";
+        cacheModel.infoModel.name = @"小A";
     }
-    [[YYCacheDemoManager sharedManager] updataPersonObject:cacheModel];
+    [[PINCacheDemoManager sharedManager] updataPersonObject:cacheModel];
     alert(@"修改成功");
 }
 
 - (void)readObjectExample:(id)sender{
-    if (![YYCacheDemoManager checkPerson]) {
+    if (![PINCacheDemoManager checkPerson]) {
         alert(@"不存在本地数据");
         return;
     }
-    PersonModel *model = [[YYCacheDemoManager sharedManager] readPerson];
+    PersonModel *model = [[PINCacheDemoManager sharedManager] readPerson];
     NSString *string = [NSString stringWithFormat:@"user_name:%@ user_id:%@ ",model.infoModel.name,model.id];
     alert(string);
 }
-
-#pragma mark - Asyn
+#pragma mark -
 - (void)saveAsynObjectExample:(id)sender{
-    [YYCacheDemoManager checkAsynPersonWithBlock:^(NSString *key, BOOL contains) {
-        if (contains) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                alert(@"本地数据已存在");
-            });
-        }else{
-            PersonModel *cacheModel = [PersonModel new];
-            cacheModel.id = [NSNumber numberWithInteger:100];
-            cacheModel.infoModel = [PersonInfoModel new];;
-            cacheModel.infoModel.sex = @"男";
-            cacheModel.infoModel.age = 20;
-            cacheModel.infoModel.name = @"小明";
-            [[YYCacheDemoManager sharedManager] updataAsynPersonObject:cacheModel withBlock:^{
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    alert(@"保存成功");
-                });
-            }];
+    
+    if ([PINCacheDemoManager checkPerson]) {
+        alert(@"本地数据已存在");
+        return;
+    }
+    PersonModel *cacheModel = [PersonModel new];
+    cacheModel.id = [NSNumber numberWithInteger:100];
+    cacheModel.infoModel = [PersonInfoModel new];;
+    cacheModel.infoModel.sex = @"男";
+    cacheModel.infoModel.age = 20;
+    cacheModel.infoModel.name = @"小A";
+    [[PINCacheDemoManager sharedManager] updataAsynPersonObject:cacheModel withBlock:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            alert(@"保存成功");
+        });
 
-        }
     }];
-   
 }
 - (void)removeAsynObjectExample:(id)sender{
-    [YYCacheDemoManager checkAsynPersonWithBlock:^(NSString *key, BOOL contains) {
-        if (!contains) {
+    [PINCacheDemoManager checkAsynPersonWithBlock:^(BOOL containsObject) {
+        if (!containsObject) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 alert(@"本地数据不存在");
             });
         }else{
-            [[YYCacheDemoManager sharedManager] removeAsynPersonWithBlock:^(NSString *key) {
+            [[PINCacheDemoManager sharedManager] removeAsynPersonWithBlock:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     alert(@"删除成功");
                 });
+                
             }];
         }
     }];
 }
-
 - (void)changeAsynObjectExample:(id)sender{
-    [YYCacheDemoManager checkAsynPersonWithBlock:^(NSString *key, BOOL contains) {
-        if (!contains) {
+    [PINCacheDemoManager checkAsynPersonWithBlock:^(BOOL containsObject) {
+        if (!containsObject) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 alert(@"本地数据不存在");
             });
         }else{
-            PersonModel *cacheModel = [[YYCacheDemoManager sharedManager] readPerson];
-            if ([cacheModel.infoModel.name isEqualToString:@"小明"]) {
+            PersonModel *cacheModel = [[PINCacheDemoManager sharedManager] readPerson];
+            if ([cacheModel.infoModel.name isEqualToString:@"小A"]) {
                 cacheModel.id = [NSNumber numberWithInteger:200];
                 cacheModel.infoModel = [PersonInfoModel new];;
                 cacheModel.infoModel.sex = @"女";
                 cacheModel.infoModel.age = 18;
-                cacheModel.infoModel.name = @"小红";
+                cacheModel.infoModel.name = @"小C";
             }else{
                 cacheModel.id = [NSNumber numberWithInteger:300];
                 cacheModel.infoModel = [PersonInfoModel new];;
                 cacheModel.infoModel.sex = @"男";
                 cacheModel.infoModel.age = 20;
-                cacheModel.infoModel.name = @"小明";
+                cacheModel.infoModel.name = @"小A";
             }
-            [[YYCacheDemoManager sharedManager] updataAsynPersonObject:cacheModel withBlock:^{
+            [[PINCacheDemoManager sharedManager] updataAsynPersonObject:cacheModel withBlock:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     alert(@"修改成功");
                 });
             }];
         }
     }];
-}
 
+}
 - (void)readAsynObjectExample:(id)sender{
-    [YYCacheDemoManager checkAsynPersonWithBlock:^(NSString *key, BOOL contains) {
-        if (!contains) {
+    [PINCacheDemoManager checkAsynPersonWithBlock:^(BOOL containsObject) {
+        if (!containsObject) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 alert(@"本地数据不存在");
             });
         }else{
-            [[YYCacheDemoManager sharedManager] readAsynPersonWithBlock:^(NSString *key, id<NSCoding> object) {
+            [[PINCacheDemoManager sharedManager]readAsynPersonWithBlock:^(PINCache * _Nonnull cache, NSString * _Nonnull key, id  _Nullable object) {
                 PersonModel *model = (PersonModel *)object;
                 NSString *string = [NSString stringWithFormat:@"user_name:%@ user_id:%@ ",model.infoModel.name,model.id];
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -268,10 +259,5 @@ static NSString *const TJExampleData = @"TJExampleData";
             }];
         }
     }];
-
 }
-
 @end
-
-
-

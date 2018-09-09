@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0ED21416C5000008BBA /* PersonModel.m */; };
 		2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */; };
+		2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB573E2142C3E200754515 /* PINCacheDemoController.m */; };
+		2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB57412142C4C800754515 /* PINCacheDemoManager.m */; };
 		2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */; };
 		2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
@@ -32,6 +34,10 @@
 		2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoModel.h; sourceTree = "<group>"; };
 		2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoModel.m; sourceTree = "<group>"; };
 		2BAAF0F021416C5000008BBA /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		2BBB573D2142C3E200754515 /* PINCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINCacheDemoController.h; sourceTree = "<group>"; };
+		2BBB573E2142C3E200754515 /* PINCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoController.m; sourceTree = "<group>"; };
+		2BBB57402142C4C800754515 /* PINCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINCacheDemoManager.h; sourceTree = "<group>"; };
+		2BBB57412142C4C800754515 /* PINCacheDemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoManager.m; sourceTree = "<group>"; };
 		2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoController.h; sourceTree = "<group>"; };
 		2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoController.m; sourceTree = "<group>"; };
 		2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoManager.h; sourceTree = "<group>"; };
@@ -77,17 +83,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B2CD83B21416CCD00E36A03 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
 		2BAAF0EB21416C0900008BBA /* YYCacheClient */ = {
 			isa = PBXGroup;
 			children = (
-				2BAAF0EC21416C3200008BBA /* Model */,
 				2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */,
 				2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */,
 				2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */,
@@ -105,6 +103,17 @@
 				2BAAF0ED21416C5000008BBA /* PersonModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2BBB573C2142C39E00754515 /* PINCacheClient */ = {
+			isa = PBXGroup;
+			children = (
+				2BBB573D2142C3E200754515 /* PINCacheDemoController.h */,
+				2BBB573E2142C3E200754515 /* PINCacheDemoController.m */,
+				2BBB57402142C4C800754515 /* PINCacheDemoManager.h */,
+				2BBB57412142C4C800754515 /* PINCacheDemoManager.m */,
+			);
+			name = PINCacheClient;
 			sourceTree = "<group>";
 		};
 		6AD1AF5AD5F81E4991A82494 /* Pods */ = {
@@ -161,7 +170,8 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
-				2B2CD83B21416CCD00E36A03 /* Vendor */,
+				2BAAF0EC21416C3200008BBA /* Model */,
+				2BBB573C2142C39E00754515 /* PINCacheClient */,
 				2BAAF0EB21416C0900008BBA /* YYCacheClient */,
 				A8D11B771D9B9B1A00439B9E /* TJKeychain */,
 				A8C748C31D87D01100B5F947 /* TJNetworkCache */,
@@ -318,6 +328,7 @@
 				2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */,
 				2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */,
 				2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */,
+				2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
 				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
@@ -325,6 +336,7 @@
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
+				2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
 				2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,

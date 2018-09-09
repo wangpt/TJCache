@@ -23,4 +23,11 @@
 + (BOOL)checkPerson;
 ///读取用户
 - (PersonModel *)readPerson;
+#pragma mark - Asyn
+- (void)updataAsynPersonObject:(id<NSCoding>)object withBlock:(void (^)(void))block;
+- (void)removeAsynPersonWithBlock:(void (^)(NSString *key))block;
+- (void)removeAllObjectsWithBlock:(void(^)(void))block;
++ (void)checkAsynPersonWithBlock:(void (^)(NSString *key, BOOL contains))block;
+- (void)readAsynPersonWithBlock:(void (^)(NSString *key, id<NSCoding> object))block;
+
 @end

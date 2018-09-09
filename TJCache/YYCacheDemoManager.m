@@ -52,20 +52,20 @@ static NSString *const TJCacheKey= @"PersonCacheModelKey";
 }
 #pragma mark - Asyn
 - (void)updataAsynPersonObject:(id<NSCoding>)object withBlock:(void (^)(void))block{
-    YYCache *cache = [YYCache cacheWithName:TJCacheKey];
+    YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache setObject:object forKey:TJCacheKey withBlock:block];
 }
 
 - (void)removeAsynPersonWithBlock:(void (^)(NSString *key))block{
-    YYCache *cache = [YYCache cacheWithName:TJCacheKey];
+    YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache removeObjectForKey:TJCacheKey withBlock:block];
 }
 - (void)removeAllObjectsWithBlock:(void(^)(void))block{
-    YYCache *cache = [YYCache cacheWithName:TJCacheKey];
+    YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache removeAllObjectsWithBlock:block];
 }
 
-- (void)checkAsynPersonWithBlock:(void (^)(NSString *key, BOOL contains))block{
++ (void)checkAsynPersonWithBlock:(void (^)(NSString *key, BOOL contains))block{
     YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache containsObjectForKey:TJCacheKey withBlock:block];
 

@@ -37,9 +37,13 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
                           TJButtonInfo:@"based on NSKeyedArchive",
                           TJButtonSelector:@""}],
                       
-                      @[@{TJButtonName:@"Show TJCacheClien",
+                      @[@{TJButtonName:@"Show YYCacaeDemo",
                           TJButtonInfo:@"based on YYCache",
-                          TJButtonSelector:@"showYYCacaeDemo"}],
+                          TJButtonSelector:@"showYYCacaeDemo"},
+                        @{TJButtonName:@"Show PINCacaeDemo",
+                          TJButtonInfo:@"based on PINCache",
+                          TJButtonSelector:@"showPINCacaeDemo"}
+                        ],
                       
                       @[@{TJButtonName:@"Show TJFMDBClien",
                           TJButtonInfo:@"based on FMDB",
@@ -108,12 +112,14 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     
 }
 
-
 - (void)showYYCacaeDemo{
     UIViewController *vc = [[NSClassFromString(@"YYCacheDemoController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+- (void)showPINCacaeDemo{
+    UIViewController *vc = [[NSClassFromString(@"PINCacheDemoController") alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)showOkayCancelActionSheet {
     [TJCacheClient saveResponseCache:@"value" forKey:@"http://tj.com"] ;
     NSString *message=[NSString stringWithFormat:@"缓存的数据:%@",[TJCacheClient getResponseCacheForKey:@"http://tj.com"]];
