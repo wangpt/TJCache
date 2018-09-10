@@ -1,5 +1,5 @@
 # TJCache
-Exmple for YYCache PINCache
+高性能 iOS 缓存框架
 
 相关介绍
 ==============
