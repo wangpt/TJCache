@@ -3,4 +3,4 @@
 
 相关介绍
 ==============
-[iOS缓存管理](http://techwpt.com/2018/09/05/cache-yycache/)
+[iOS缓存管理](http://techwpt.com/2018/09/05/cache-nscache/)
