@@ -23,38 +23,38 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"TJCache";
-        self.data = @[@[@{TJButtonName:@"Show TJCache",
-                          TJButtonInfo:@"based on NSCache",
-                          TJButtonSelector:@""},
-                        @{TJButtonName:@"Show TJUserDefaults",
-                          TJButtonInfo:@"based on NSUserDefaults",
-                          TJButtonSelector:@""},
-                        @{TJButtonName:@"Show TJFileManager",
-                          TJButtonInfo:@"based on NSFileManager",
-                          TJButtonSelector:@""},
-                        @{TJButtonName:@"Show TJKeyedArchive",
-                          TJButtonInfo:@"based on NSKeyedArchive",
-                          TJButtonSelector:@""}],
-                      
-                      @[@{TJButtonName:@"Show YYCacaeDemo",
-                          TJButtonInfo:@"based on YYCache",
-                          TJButtonSelector:@"showYYCacaeDemo"},
-                        @{TJButtonName:@"Show PINCacaeDemo",
-                          TJButtonInfo:@"based on PINCache",
-                          TJButtonSelector:@"showPINCacaeDemo"}
-                        ],
-                      
-                      @[@{TJButtonName:@"Show TJFMDBClien",
-                          TJButtonInfo:@"based on FMDB",
-                          TJButtonSelector:@""}]];
+        
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    self.title = @"TJCache";
+    self.data = @[@[@{TJButtonName:@"Show TJCache",
+                      TJButtonInfo:@"based on NSCache",
+                      TJButtonSelector:@""},
+                    @{TJButtonName:@"Show TJUserDefaults",
+                      TJButtonInfo:@"based on NSUserDefaults",
+                      TJButtonSelector:@""},
+                    @{TJButtonName:@"Show TJFileManager",
+                      TJButtonInfo:@"based on NSFileManager",
+                      TJButtonSelector:@""},
+                    @{TJButtonName:@"Show TJKeyedArchive",
+                      TJButtonInfo:@"based on NSKeyedArchive",
+                      TJButtonSelector:@""}],
+                  
+                  @[@{TJButtonName:@"Show YYCacaeDemo",
+                      TJButtonInfo:@"based on YYCache",
+                      TJButtonSelector:@"showYYCacaeDemo"},
+                    @{TJButtonName:@"Show PINCacaeDemo",
+                      TJButtonInfo:@"based on PINCache",
+                      TJButtonSelector:@"showPINCacaeDemo"}
+                    ],
+                  
+                  @[@{TJButtonName:@"Show TJFMDBClien",
+                      TJButtonInfo:@"based on FMDB",
+                      TJButtonSelector:@""}]];
     
     
 }

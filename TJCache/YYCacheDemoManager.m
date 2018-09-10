@@ -60,6 +60,7 @@ static NSString *const TJCacheKey= @"PersonCacheModelKey";
     YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache removeObjectForKey:TJCacheKey withBlock:block];
 }
+
 - (void)removeAllObjectsWithBlock:(void(^)(void))block{
     YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache removeAllObjectsWithBlock:block];
@@ -68,11 +69,10 @@ static NSString *const TJCacheKey= @"PersonCacheModelKey";
 + (void)checkAsynPersonWithBlock:(void (^)(NSString *key, BOOL contains))block{
     YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache containsObjectForKey:TJCacheKey withBlock:block];
-
 }
+
 - (void)readAsynPersonWithBlock:(void (^)(NSString *key, id<NSCoding> object))block{
     YYCache *cache = [YYCache cacheWithName:TJCacheName];
     [cache objectForKey:TJCacheKey withBlock:block];
-
 }
 @end
