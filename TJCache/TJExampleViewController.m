@@ -8,7 +8,6 @@
 
 #import "TJExampleViewController.h"
 #import "TJFileManager.h"
-#import "TJCacheClient.h"
 
 static NSString *const TJButtonName = @"TJButtonName";
 static NSString *const TJButtonInfo = @"TJButtonInfo";
@@ -33,16 +32,16 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     self.title = @"TJCache";
     self.data = @[@[@{TJButtonName:@"Show TJCache",
                       TJButtonInfo:@"based on NSCache",
-                      TJButtonSelector:@""},
+                      TJButtonSelector:@"showOkayCancelActionSheet"},
                     @{TJButtonName:@"Show TJUserDefaults",
                       TJButtonInfo:@"based on NSUserDefaults",
-                      TJButtonSelector:@""},
+                      TJButtonSelector:@"showOkayCancelActionSheet"},
                     @{TJButtonName:@"Show TJFileManager",
                       TJButtonInfo:@"based on NSFileManager",
-                      TJButtonSelector:@""},
+                      TJButtonSelector:@"showOkayCancelActionSheet"},
                     @{TJButtonName:@"Show TJKeyedArchive",
                       TJButtonInfo:@"based on NSKeyedArchive",
-                      TJButtonSelector:@""}],
+                      TJButtonSelector:@"showOkayCancelActionSheet"}],
                   
                   @[@{TJButtonName:@"Show YYCacaeDemo",
                       TJButtonInfo:@"based on YYCache",
@@ -101,7 +100,7 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section==1) {
+    if (indexPath.section <2) {
         NSDictionary *data = self.data[indexPath.section][indexPath.row];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -121,9 +120,7 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)showOkayCancelActionSheet {
-    [TJCacheClient saveResponseCache:@"value" forKey:@"http://tj.com"] ;
-    NSString *message=[NSString stringWithFormat:@"缓存的数据:%@",[TJCacheClient getResponseCacheForKey:@"http://tj.com"]];
-    alert(message);
+
 }
 
 - (BOOL)shouldAutorotate; { return YES; }

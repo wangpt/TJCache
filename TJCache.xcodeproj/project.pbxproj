@@ -12,9 +12,8 @@
 		2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB573E2142C3E200754515 /* PINCacheDemoController.m */; };
 		2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB57412142C4C800754515 /* PINCacheDemoManager.m */; };
 		2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */; };
-		2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */; };
+		2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE7B20215891A600E27F78 /* YYCacheClient.m */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
-		A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D31D82B06D00273310 /* TJCacheClient.m */; };
 		A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85E56D71D82B43900273310 /* TJExampleViewController.m */; };
 		A88FC4791D8167EC004D74FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC4781D8167EC004D74FE /* main.m */; };
 		A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A88FC47B1D8167EC004D74FE /* AppDelegate.m */; };
@@ -40,14 +39,12 @@
 		2BBB57412142C4C800754515 /* PINCacheDemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoManager.m; sourceTree = "<group>"; };
 		2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoController.h; sourceTree = "<group>"; };
 		2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoController.m; sourceTree = "<group>"; };
-		2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoManager.h; sourceTree = "<group>"; };
-		2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoManager.m; sourceTree = "<group>"; };
+		2BDE7B1F215891A600E27F78 /* YYCacheClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheClient.h; sourceTree = "<group>"; };
+		2BDE7B20215891A600E27F78 /* YYCacheClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheClient.m; sourceTree = "<group>"; };
 		45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.release.xcconfig"; sourceTree = "<group>"; };
 		4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJCache/Pods-TJCache.debug.xcconfig"; sourceTree = "<group>"; };
 		A80BF6B91D816D9C00808C9B /* TJKeyedArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJKeyedArchive.h; sourceTree = "<group>"; };
 		A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJKeyedArchive.m; sourceTree = "<group>"; };
-		A85E56D21D82B06D00273310 /* TJCacheClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJCacheClient.h; sourceTree = "<group>"; };
-		A85E56D31D82B06D00273310 /* TJCacheClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJCacheClient.m; sourceTree = "<group>"; };
 		A85E56D61D82B43900273310 /* TJExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJExampleViewController.h; sourceTree = "<group>"; };
 		A85E56D71D82B43900273310 /* TJExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJExampleViewController.m; sourceTree = "<group>"; };
 		A88FC4741D8167EC004D74FE /* TJCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,8 +85,8 @@
 			children = (
 				2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */,
 				2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */,
-				2BDB77F42142565C00F3A537 /* YYCacheDemoManager.h */,
-				2BDB77F52142565C00F3A537 /* YYCacheDemoManager.m */,
+				2BDE7B1F215891A600E27F78 /* YYCacheClient.h */,
+				2BDE7B20215891A600E27F78 /* YYCacheClient.m */,
 			);
 			name = YYCacheClient;
 			sourceTree = "<group>";
@@ -133,15 +130,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A85E56D11D82B05700273310 /* TJCacheClient */ = {
-			isa = PBXGroup;
-			children = (
-				A85E56D21D82B06D00273310 /* TJCacheClient.h */,
-				A85E56D31D82B06D00273310 /* TJCacheClient.m */,
-			);
-			name = TJCacheClient;
-			sourceTree = "<group>";
-		};
 		A85E56D51D82B28700273310 /* TJFMDBClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +164,6 @@
 				A8D11B771D9B9B1A00439B9E /* TJKeychain */,
 				A8C748C31D87D01100B5F947 /* TJNetworkCache */,
 				A85E56D51D82B28700273310 /* TJFMDBClient */,
-				A85E56D11D82B05700273310 /* TJCacheClient */,
 				A88FC4971D816801004D74FE /* Cache */,
 				A88FC47A1D8167EC004D74FE /* AppDelegate.h */,
 				A88FC47B1D8167EC004D74FE /* AppDelegate.m */,
@@ -243,6 +230,7 @@
 				A88FC4701D8167EC004D74FE /* Sources */,
 				A88FC4711D8167EC004D74FE /* Frameworks */,
 				A88FC4721D8167EC004D74FE /* Resources */,
+				0347109185CA44FB8561840A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,6 +288,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0347109185CA44FB8561840A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TJCache/Pods-TJCache-resources.sh",
+				"${PODS_ROOT}/SSKeychain/Support/SSKeychain.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SSKeychain.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TJCache/Pods-TJCache-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DD650DBB257653099EA8D10C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,14 +337,13 @@
 				2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
-				A85E56D41D82B06D00273310 /* TJCacheClient.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
+				2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
-				2BDB77F62142565C00F3A537 /* YYCacheDemoManager.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
 				A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */,
 			);

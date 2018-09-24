@@ -46,7 +46,7 @@ static NSString *const TJExampleData = @"TJExampleData";
     self.titles = ({
         NSMutableArray *array = @[
                                   @{
-                                      TJExampleName:@"同步",
+                                      TJExampleName:@"同步方法",
                                       TJExampleData:@[
                                               [PINCacheExample exampleWithTitle:@"新增数据"
                                                                       selector:@"saveObjectExample:"],
@@ -59,7 +59,7 @@ static NSString *const TJExampleData = @"TJExampleData";
                                               ]
                                       },
                                   @{
-                                      TJExampleName:@"异步",
+                                      TJExampleName:@"异步方法",
                                       TJExampleData:@[
                                               [PINCacheExample exampleWithTitle:@"新增数据"
                                                                        selector:@"saveAsynObjectExample:"],

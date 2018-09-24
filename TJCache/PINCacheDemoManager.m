@@ -11,6 +11,7 @@
 static PINCacheDemoManager *sharedCacheManager = nil;
 static NSString *const TJCacheName = @"TJPINCacheName";
 static NSString *const TJCacheKey= @"TJPINCacheKey";
+//static PINCache *_dataAsynCache;
 
 + (instancetype)sharedManager {
     @synchronized(self) {

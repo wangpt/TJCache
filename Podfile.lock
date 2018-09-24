@@ -1,0 +1,36 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - PINCache (2.3)
+  - SSKeychain (1.4.1)
+  - YYCache (1.0.4)
+
+DEPENDENCIES:
+  - FMDB (~> 2.6.2)
+  - MagicalRecord (= 2.3.2)
+  - PINCache (= 2.3)
+  - SSKeychain (~> 1.4.1)
+  - YYCache (= 1.0.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - MagicalRecord
+    - PINCache
+    - SSKeychain
+    - YYCache
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+
+PODFILE CHECKSUM: bb2487dae27a1cbd5a39221dc83bbb508d66392c
+
+COCOAPODS: 1.5.3
