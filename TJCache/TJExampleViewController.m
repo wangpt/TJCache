@@ -53,9 +53,13 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
                   
                   @[@{TJButtonName:@"Show TJFMDBClien",
                       TJButtonInfo:@"based on FMDB",
-                      TJButtonSelector:@""}]];
+                      TJButtonSelector:@""}],
+                  
+                  @[@{TJButtonName:@"Show MRCoreDataClient",
+                      TJButtonInfo:@"based on MagicalRecord",
+                      TJButtonSelector:@"showMRCoreDataClient"}]];
     
-    
+   //MRCoreDataController
 }
 #pragma mark UITableViewDataSource
 
@@ -100,7 +104,7 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.section <2) {
+    if (indexPath.section <2 || indexPath.section == 3) {
         NSDictionary *data = self.data[indexPath.section][indexPath.row];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -119,6 +123,15 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     UIViewController *vc = [[NSClassFromString(@"PINCacheDemoController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)showMRCoreDataClient{
+    
+    UIViewController *vc = [[NSClassFromString(@"MRCoreDataController") alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+
 - (void)showOkayCancelActionSheet {
 
 }

@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2B567358215A7B1400295E06 /* MRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B567357215A7B1400295E06 /* MRCoreDataController.m */; };
-		2B567372215A80B200295E06 /* PersonEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B56736E215A80B200295E06 /* PersonEntity+CoreDataProperties.m */; };
-		2B567374215A80B200295E06 /* PersonEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B567371215A80B200295E06 /* PersonEntity+CoreDataClass.m */; };
-		2B567377215A80C400295E06 /* TJPersonModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B567375215A80C400295E06 /* TJPersonModel.xcdatamodeld */; };
+		2B97D67C2164702A007346AE /* TJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB49745216384CF00F45B7B /* TJDataModel.xcdatamodeld */; };
+		2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B97D68021647BBA007346AE /* MRCoreDataClient.m */; };
 		2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0ED21416C5000008BBA /* PersonModel.m */; };
 		2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */; };
+		2BB4977A21639D8F00F45B7B /* PersonEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4977221639D8F00F45B7B /* PersonEntity+CoreDataClass.m */; };
+		2BB4977B21639D8F00F45B7B /* PersonEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4977321639D8F00F45B7B /* PersonEntity+CoreDataProperties.m */; };
+		2BB497832163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB497812163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m */; };
+		2BB497842163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB497822163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m */; };
 		2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB573E2142C3E200754515 /* PINCacheDemoController.m */; };
 		2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB57412142C4C800754515 /* PINCacheDemoManager.m */; };
 		2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */; };
@@ -35,15 +38,22 @@
 /* Begin PBXFileReference section */
 		2B567356215A7B1400295E06 /* MRCoreDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCoreDataController.h; sourceTree = "<group>"; };
 		2B567357215A7B1400295E06 /* MRCoreDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCoreDataController.m; sourceTree = "<group>"; };
-		2B56736C215A80B200295E06 /* PersonEntity+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonEntity+CoreDataClass.h"; sourceTree = "<group>"; };
-		2B56736D215A80B200295E06 /* PersonEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
-		2B56736E215A80B200295E06 /* PersonEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersonEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
-		2B567371215A80B200295E06 /* PersonEntity+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersonEntity+CoreDataClass.m"; sourceTree = "<group>"; };
-		2B567376215A80C400295E06 /* TJPersonModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TJPersonModel.xcdatamodel; sourceTree = "<group>"; };
+		2B97D67F21647BBA007346AE /* MRCoreDataClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCoreDataClient.h; sourceTree = "<group>"; };
+		2B97D68021647BBA007346AE /* MRCoreDataClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCoreDataClient.m; sourceTree = "<group>"; };
 		2BAAF0ED21416C5000008BBA /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
 		2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoModel.h; sourceTree = "<group>"; };
 		2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoModel.m; sourceTree = "<group>"; };
 		2BAAF0F021416C5000008BBA /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		2BB49744216382B300F45B7B /* TJCache-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TJCache-Bridging-Header.h"; sourceTree = "<group>"; };
+		2BB49746216384CF00F45B7B /* TJDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TJDataModel.xcdatamodel; sourceTree = "<group>"; };
+		2BB4977021639D8F00F45B7B /* PersonEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2BB4977121639D8F00F45B7B /* PersonEntity+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonEntity+CoreDataClass.h"; sourceTree = "<group>"; };
+		2BB4977221639D8F00F45B7B /* PersonEntity+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PersonEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		2BB4977321639D8F00F45B7B /* PersonEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PersonEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2BB4977F2163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonInfoEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2BB497802163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonInfoEntity+CoreDataClass.h"; sourceTree = "<group>"; };
+		2BB497812163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PersonInfoEntity+CoreDataClass.m"; sourceTree = "<group>"; };
+		2BB497822163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PersonInfoEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2BBB573D2142C3E200754515 /* PINCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINCacheDemoController.h; sourceTree = "<group>"; };
 		2BBB573E2142C3E200754515 /* PINCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoController.m; sourceTree = "<group>"; };
 		2BBB57402142C4C800754515 /* PINCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINCacheDemoManager.h; sourceTree = "<group>"; };
@@ -94,13 +104,13 @@
 		2B567365215A805600295E06 /* MRCoreDataClient */ = {
 			isa = PBXGroup;
 			children = (
-				2B567375215A80C400295E06 /* TJPersonModel.xcdatamodeld */,
-				2B56736C215A80B200295E06 /* PersonEntity+CoreDataClass.h */,
-				2B567371215A80B200295E06 /* PersonEntity+CoreDataClass.m */,
-				2B56736D215A80B200295E06 /* PersonEntity+CoreDataProperties.h */,
-				2B56736E215A80B200295E06 /* PersonEntity+CoreDataProperties.m */,
+				2BB4977E21639DB900F45B7B /* Models */,
+				2BB49744216382B300F45B7B /* TJCache-Bridging-Header.h */,
 				2B567356215A7B1400295E06 /* MRCoreDataController.h */,
 				2B567357215A7B1400295E06 /* MRCoreDataController.m */,
+				2B97D67F21647BBA007346AE /* MRCoreDataClient.h */,
+				2B97D68021647BBA007346AE /* MRCoreDataClient.m */,
+				2BB49745216384CF00F45B7B /* TJDataModel.xcdatamodeld */,
 			);
 			path = MRCoreDataClient;
 			sourceTree = "<group>";
@@ -125,6 +135,21 @@
 				2BAAF0ED21416C5000008BBA /* PersonModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2BB4977E21639DB900F45B7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BB4977F2163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.h */,
+				2BB497802163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.h */,
+				2BB497812163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m */,
+				2BB497822163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m */,
+				2BB4977021639D8F00F45B7B /* PersonEntity+CoreDataProperties.h */,
+				2BB4977321639D8F00F45B7B /* PersonEntity+CoreDataProperties.m */,
+				2BB4977121639D8F00F45B7B /* PersonEntity+CoreDataClass.h */,
+				2BB4977221639D8F00F45B7B /* PersonEntity+CoreDataClass.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2BBB573C2142C39E00754515 /* PINCacheClient */ = {
@@ -183,8 +208,8 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
-				2B567365215A805600295E06 /* MRCoreDataClient */,
 				2BAAF0EC21416C3200008BBA /* Model */,
+				2B567365215A805600295E06 /* MRCoreDataClient */,
 				2BBB573C2142C39E00754515 /* PINCacheClient */,
 				2BAAF0EB21416C0900008BBA /* YYCacheClient */,
 				A8D11B771D9B9B1A00439B9E /* TJKeychain */,
@@ -279,6 +304,7 @@
 					A88FC4731D8167EC004D74FE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = DQK8L5T84R;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -357,25 +383,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B97D67C2164702A007346AE /* TJDataModel.xcdatamodeld in Sources */,
 				2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */,
-				2B567372215A80B200295E06 /* PersonEntity+CoreDataProperties.m in Sources */,
 				2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */,
+				2BB497832163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m in Sources */,
 				2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */,
 				2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */,
+				2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
+				2BB4977A21639D8F00F45B7B /* PersonEntity+CoreDataClass.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				2B567358215A7B1400295E06 /* MRCoreDataController.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
-				2B567374215A80B200295E06 /* PersonEntity+CoreDataClass.m in Sources */,
 				2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */,
+				2BB497842163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m in Sources */,
 				A88FC49A1D816812004D74FE /* TJCache.m in Sources */,
+				2BB4977B21639D8F00F45B7B /* PersonEntity+CoreDataProperties.m in Sources */,
 				A88FC4791D8167EC004D74FE /* main.m in Sources */,
 				A8D64A681D98C5750001CB63 /* TJFileManager.m in Sources */,
-				2B567377215A80C400295E06 /* TJPersonModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +521,16 @@
 			baseConfigurationReference = 4D01A2A035E500AA9A2FF6C7 /* Pods-TJCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DQK8L5T84R;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TJCache/MRCoreDataClient/TJCache-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -506,12 +539,15 @@
 			baseConfigurationReference = 45F256CCE312D3072CFE367F /* Pods-TJCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DQK8L5T84R;
 				INFOPLIST_FILE = TJCache/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tjzl.TJCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TJCache/MRCoreDataClient/TJCache-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -539,13 +575,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2B567375215A80C400295E06 /* TJPersonModel.xcdatamodeld */ = {
+		2BB49745216384CF00F45B7B /* TJDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2B567376215A80C400295E06 /* TJPersonModel.xcdatamodel */,
+				2BB49746216384CF00F45B7B /* TJDataModel.xcdatamodel */,
 			);
-			currentVersion = 2B567376215A80C400295E06 /* TJPersonModel.xcdatamodel */;
-			path = TJPersonModel.xcdatamodeld;
+			currentVersion = 2BB49746216384CF00F45B7B /* TJDataModel.xcdatamodel */;
+			path = TJDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

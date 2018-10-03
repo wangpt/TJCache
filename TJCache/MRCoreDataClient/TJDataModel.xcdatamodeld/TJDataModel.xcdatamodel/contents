@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="PersonEntity" representedClassName="PersonEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="infoEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonInfoEntity" inverseName="person" inverseEntity="PersonInfoEntity" syncable="YES"/>
+        <relationship name="moreEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonMoreEntity" inverseName="person" inverseEntity="PersonMoreEntity" syncable="YES"/>
+    </entity>
+    <entity name="PersonInfoEntity" representedClassName="PersonInfoEntity" syncable="YES">
+        <attribute name="infoSex" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="infoEntity" inverseEntity="PersonEntity" syncable="YES"/>
+    </entity>
+    <entity name="PersonMoreEntity" representedClassName="PersonMoreEntity" syncable="YES">
+        <attribute name="moreAge" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="moreEntity" inverseEntity="PersonEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PersonEntity" positionX="-18" positionY="27" width="128" height="105"/>
+        <element name="PersonInfoEntity" positionX="-9" positionY="63" width="128" height="75"/>
+        <element name="PersonMoreEntity" positionX="0" positionY="72" width="128" height="75"/>
+    </elements>
+</model>

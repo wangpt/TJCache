@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#define alert(msg) [[[UIAlertView alloc]initWithTitle:nil message:msg delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil] show]
 
 NS_ASSUME_NONNULL_BEGIN
+
+@interface MRCacheExample : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) SEL selector;
+
+@end
 
 @interface MRCoreDataController : UIViewController
 
