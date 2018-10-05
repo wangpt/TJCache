@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PersonInfoModel : NSObject<NSCoding>
+@interface PersonInfoModel : NSObject <NSCoding>
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *sex;
 @property (nonatomic, assign) NSInteger age;
