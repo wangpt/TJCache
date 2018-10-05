@@ -12,12 +12,17 @@
 		2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B97D68021647BBA007346AE /* MRCoreDataClient.m */; };
 		2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0ED21416C5000008BBA /* PersonModel.m */; };
 		2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */; };
+		2BAEE82F2167161000EA6FDD /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAEE82B2167161000EA6FDD /* People.m */; };
+		2BAEE8302167161000EA6FDD /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAEE82C2167161000EA6FDD /* Car.m */; };
+		2BAEE8312167161000EA6FDD /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAEE82E2167161000EA6FDD /* Pet.m */; };
 		2BB4977A21639D8F00F45B7B /* PersonEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4977221639D8F00F45B7B /* PersonEntity+CoreDataClass.m */; };
 		2BB4977B21639D8F00F45B7B /* PersonEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4977321639D8F00F45B7B /* PersonEntity+CoreDataProperties.m */; };
 		2BB497832163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB497812163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m */; };
 		2BB497842163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB497822163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m */; };
 		2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB573E2142C3E200754515 /* PINCacheDemoController.m */; };
 		2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB57412142C4C800754515 /* PINCacheDemoManager.m */; };
+		2BCAF9E321662AF4008F249D /* FMDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCAF9E221662AF4008F249D /* FMDBController.m */; };
+		2BCAF9E621662FB7008F249D /* FMDBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCAF9E521662FB7008F249D /* FMDBClient.m */; };
 		2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */; };
 		2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE7B20215891A600E27F78 /* YYCacheClient.m */; };
 		A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = A80BF6BA1D816D9C00808C9B /* TJKeyedArchive.m */; };
@@ -44,6 +49,12 @@
 		2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoModel.h; sourceTree = "<group>"; };
 		2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoModel.m; sourceTree = "<group>"; };
 		2BAAF0F021416C5000008BBA /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		2BAEE8292167160F00EA6FDD /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		2BAEE82A2167161000EA6FDD /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		2BAEE82B2167161000EA6FDD /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		2BAEE82C2167161000EA6FDD /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		2BAEE82D2167161000EA6FDD /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		2BAEE82E2167161000EA6FDD /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
 		2BB49744216382B300F45B7B /* TJCache-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TJCache-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BB49746216384CF00F45B7B /* TJDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TJDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2BB4977021639D8F00F45B7B /* PersonEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -58,6 +69,10 @@
 		2BBB573E2142C3E200754515 /* PINCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoController.m; sourceTree = "<group>"; };
 		2BBB57402142C4C800754515 /* PINCacheDemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PINCacheDemoManager.h; sourceTree = "<group>"; };
 		2BBB57412142C4C800754515 /* PINCacheDemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PINCacheDemoManager.m; sourceTree = "<group>"; };
+		2BCAF9E121662AF4008F249D /* FMDBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBController.h; sourceTree = "<group>"; };
+		2BCAF9E221662AF4008F249D /* FMDBController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBController.m; sourceTree = "<group>"; };
+		2BCAF9E421662FB7008F249D /* FMDBClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBClient.h; sourceTree = "<group>"; };
+		2BCAF9E521662FB7008F249D /* FMDBClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBClient.m; sourceTree = "<group>"; };
 		2BDB77F021421BD600F3A537 /* YYCacheDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheDemoController.h; sourceTree = "<group>"; };
 		2BDB77F121421BD600F3A537 /* YYCacheDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCacheDemoController.m; sourceTree = "<group>"; };
 		2BDE7B1F215891A600E27F78 /* YYCacheClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCacheClient.h; sourceTree = "<group>"; };
@@ -129,6 +144,12 @@
 		2BAAF0EC21416C3200008BBA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BAEE8292167160F00EA6FDD /* Car.h */,
+				2BAEE82C2167161000EA6FDD /* Car.m */,
+				2BAEE82A2167161000EA6FDD /* People.h */,
+				2BAEE82B2167161000EA6FDD /* People.m */,
+				2BAEE82D2167161000EA6FDD /* Pet.h */,
+				2BAEE82E2167161000EA6FDD /* Pet.m */,
 				2BAAF0EE21416C5000008BBA /* PersonInfoModel.h */,
 				2BAAF0EF21416C5000008BBA /* PersonInfoModel.m */,
 				2BAAF0F021416C5000008BBA /* PersonModel.h */,
@@ -183,6 +204,10 @@
 		A85E56D51D82B28700273310 /* TJFMDBClient */ = {
 			isa = PBXGroup;
 			children = (
+				2BCAF9E121662AF4008F249D /* FMDBController.h */,
+				2BCAF9E221662AF4008F249D /* FMDBController.m */,
+				2BCAF9E421662FB7008F249D /* FMDBClient.h */,
+				2BCAF9E521662FB7008F249D /* FMDBClient.m */,
 			);
 			name = TJFMDBClient;
 			sourceTree = "<group>";
@@ -387,16 +412,21 @@
 				2BAAF0F221416C5000008BBA /* PersonInfoModel.m in Sources */,
 				2BAAF0F121416C5000008BBA /* PersonModel.m in Sources */,
 				2BB497832163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m in Sources */,
+				2BAEE8302167161000EA6FDD /* Car.m in Sources */,
 				2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */,
 				2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */,
 				2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */,
+				2BAEE82F2167161000EA6FDD /* People.m in Sources */,
+				2BCAF9E321662AF4008F249D /* FMDBController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
 				A8D11B7A1D9B9B5700439B9E /* TJKeychain.m in Sources */,
+				2BAEE8312167161000EA6FDD /* Pet.m in Sources */,
 				2BB4977A21639D8F00F45B7B /* PersonEntity+CoreDataClass.m in Sources */,
 				A88FC47C1D8167EC004D74FE /* AppDelegate.m in Sources */,
 				2B567358215A7B1400295E06 /* MRCoreDataController.m in Sources */,
 				A85E56D81D82B43900273310 /* TJExampleViewController.m in Sources */,
 				2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */,
+				2BCAF9E621662FB7008F249D /* FMDBClient.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */,

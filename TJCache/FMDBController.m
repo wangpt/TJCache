@@ -1,35 +1,33 @@
 //
-//  MRCoreDataController.m
+//  FMDBController.m
 //  TJCache
 //
-//  Created by tao on 2018/9/25.
+//  Created by tao on 2018/10/4.
 //  Copyright © 2018年 王朋涛. All rights reserved.
 //
 
-#import "MRCoreDataController.h"
-#import "PersonEntity+CoreDataClass.h"
-#import "PersonInfoEntity+CoreDataClass.h"
-#import "MRCoreDataClient.h"
-
-@implementation MRCacheExample
+#import "FMDBController.h"
+#import "FMDBClient.h"
+#import "PersonModel.h"
+@implementation FMCacheExample
 + (instancetype)exampleWithTitle:(NSString *)title selector:(NSString *)selector{
-    MRCacheExample *example = [[self class] new];
+    FMCacheExample *example = [[self class] new];
     example.title = title;
     example.selector = NSSelectorFromString(selector);
     return example;
 }
 @end
 
-@interface MRCoreDataController ()<UITableViewDelegate, UITableViewDataSource>
+@interface FMDBController ()<UITableViewDelegate, UITableViewDataSource>
 
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *titles;
 
-
 @end
 
-@implementation MRCoreDataController
+@implementation FMDBController
+
 static NSString *const TJExampleName = @"TJExampleName";
 static NSString *const TJExampleData = @"TJExampleData";
 - (UITableView *)tableView{
@@ -41,21 +39,19 @@ static NSString *const TJExampleData = @"TJExampleData";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    self.title = @"YYCacheDemo";
+    self.title = @"FMDBClient";
     self.titles = ({
         NSMutableArray *array = @[
                                   @{
                                       TJExampleName:@"同步方法",
                                       TJExampleData:@[
-                                              [MRCacheExample exampleWithTitle:@"新增数据"
+                                              [FMCacheExample exampleWithTitle:@"新增数据"
                                                                       selector:@"saveObjectExample:"],
-                                              [MRCacheExample exampleWithTitle:@"删除数据"
+                                              [FMCacheExample exampleWithTitle:@"删除数据"
                                                                       selector:@"removeObjectExample:"],
-                                              [MRCacheExample exampleWithTitle:@"修改数据"
+                                              [FMCacheExample exampleWithTitle:@"修改数据"
                                                                       selector:@"changeObjectExample:"],
-                                              [MRCacheExample exampleWithTitle:@"查找数据"
+                                              [FMCacheExample exampleWithTitle:@"查找数据"
                                                                       selector:@"readObjectExample:"],
                                               ]
                                       },
@@ -86,7 +82,7 @@ static NSString *const TJExampleData = @"TJExampleData";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     NSDictionary *dic = (NSDictionary *)self.titles[indexPath.section];
     NSArray *array = dic[TJExampleData];
-    MRCacheExample *model = array[indexPath.row];
+    FMCacheExample *model = array[indexPath.row];
     cell.textLabel.text = model.title;
     return cell;
 }
@@ -103,39 +99,52 @@ static NSString *const TJExampleData = @"TJExampleData";
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     NSDictionary *dic = (NSDictionary *)self.titles[indexPath.section];
     NSArray *array = dic[TJExampleData];
-    MRCacheExample *example = array[indexPath.row];
+    FMCacheExample *example = array[indexPath.row];
     [self performSelector:example.selector withObject:nil];
 #pragma clang diagnostic pop
 }
 
 #pragma mark - Sync
 - (void)saveObjectExample:(id)sender{
-    for (int i = 0; i<10; i++) {
-        [MRCoreDataClient savePersonId:[NSString stringWithFormat:@"%d",i] name:@"小明" sex:@"1"];
-    }
+    PersonModel *model = [PersonModel new];
+    model.id = [NSNumber numberWithInteger:1];
+    PersonInfoModel *infoModel = [PersonInfoModel new];
+    infoModel.name = @"小红";
+    infoModel.sex = @"1";
+    infoModel.age = 18;
+    model.infoModel = infoModel;
+    [FMDBClient qunueInsertPeople:model];
     alert(@"保存成功");
 }
 
 - (void)removeObjectExample:(id)sender{
-    [MRCoreDataClient removeAllObjects];
+    [FMDBClient qunueDeleteAllData];
     alert(@"删除成功");
 }
 
 - (void)changeObjectExample:(id)sender{
-    [MRCoreDataClient updataPersonId:@"1" name:@"小红" sex:@"0"];
+    PersonModel *model = [PersonModel new];
+    model.id = [NSNumber numberWithInteger:1];
+    PersonInfoModel *infoModel = [PersonInfoModel new];
+    infoModel.name = @"小明";
+    infoModel.sex = @"0";
+    infoModel.age = 20;
+    model.infoModel = infoModel;
+    [FMDBClient qunueUpdatePeople:model];
     alert(@"修改成功");
 }
 
 - (void)readObjectExample:(id)sender{
-    PersonEntity *entity = [MRCoreDataClient readPersonId:@"1"];
-    if (entity) {
-        alert(entity.name);
+    NSArray *dataArray = [FMDBClient qunueGetPeople];
+    PersonModel *model = dataArray.firstObject;
+    if (model) {
+        NSLog(@"%@___%@",model.id,model.infoModel.name);
+        alert(model.infoModel.name);
+
     }else{
         alert(@"暂无数据");
+
     }
 }
 
-
 @end
-
-

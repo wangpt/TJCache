@@ -10,8 +10,11 @@
 
 @implementation PersonModel
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self.id = [aDecoder decodeObjectForKey:@"id"];
-    self.infoModel = [aDecoder decodeObjectForKey:@"infoModel"];
+    if (self = [super init])
+    {
+        self.id = [aDecoder decodeObjectForKey:@"id"];
+        self.infoModel = [aDecoder decodeObjectForKey:@"infoModel"];
+    }
     return self;
 }
 

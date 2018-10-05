@@ -53,7 +53,7 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
                   
                   @[@{TJButtonName:@"Show TJFMDBClien",
                       TJButtonInfo:@"based on FMDB",
-                      TJButtonSelector:@""}],
+                      TJButtonSelector:@"showFMDBClient"}],
                   
                   @[@{TJButtonName:@"Show MRCoreDataClient",
                       TJButtonInfo:@"based on MagicalRecord",
@@ -103,15 +103,12 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.section <2 || indexPath.section == 3) {
-        NSDictionary *data = self.data[indexPath.section][indexPath.row];
+    NSDictionary *data = self.data[indexPath.section][indexPath.row];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        NSString *selectorName = data[TJButtonSelector];
-        [self performSelector:NSSelectorFromString(selectorName) withObject:nil];
+    NSString *selectorName = data[TJButtonSelector];
+    [self performSelector:NSSelectorFromString(selectorName) withObject:nil];
 #pragma clang diagnostic pop
-    }
     
 }
 
@@ -129,7 +126,11 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     UIViewController *vc = [[NSClassFromString(@"MRCoreDataController") alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+- (void)showFMDBClient{
+    
+    UIViewController *vc = [[NSClassFromString(@"FMDBController") alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 - (void)showOkayCancelActionSheet {

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PersonInfoModel : NSObject<NSCoding>
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *sex;
 @property (nonatomic, assign) NSInteger age;
 @end

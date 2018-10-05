@@ -10,5 +10,6 @@
 #import "PersonInfoModel.h"
 @interface PersonModel : NSObject<NSCoding>
 @property (nonatomic, strong) NSNumber *id;
+
 @property (nonatomic, strong) PersonInfoModel *infoModel;
 @end

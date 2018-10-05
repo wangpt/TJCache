@@ -10,10 +10,14 @@
 
 @implementation PersonInfoModel
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self.name = [aDecoder decodeObjectForKey:@"name"];
-    self.sex = [aDecoder decodeObjectForKey:@"sex"];
-    self.age = [aDecoder decodeIntegerForKey:@"age"];
+    if (self = [super init])
+    {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.sex = [aDecoder decodeObjectForKey:@"sex"];
+        self.age = [aDecoder decodeIntegerForKey:@"age"];
+    }
     return self;
+    
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
