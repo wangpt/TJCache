@@ -34,7 +34,6 @@ static FMDBClient *sharedInstance = nil;
     NSString *fileName = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:DBNAME];
     _queue = [FMDatabaseQueue databaseQueueWithPath:fileName];
     NSLog(@"filePath:%@",fileName);
-
     [_queue inDatabase:^(FMDatabase *db) {
         //INTEGER，值是有符号整形，根据值的大小以1,2,3,4,6或8字节存放
         // REAL，值是浮点型值，以8字节IEEE浮点数存放
