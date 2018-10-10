@@ -145,6 +145,38 @@
             endingLineNumber = "152"
             landmarkName = "+qunueUpdatePeople:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32+[FMDBClient qunueUpdatePeople:]_block_invoke"
+                  moduleName = "TJCache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tao/Desktop/GitCode/TJCache/TJCache/FMDBClient.m"
+                  timestampString = "560858013.062294"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "319">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.77"
+                  moduleName = "TJCache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tao/Desktop/GitCode/TJCache/TJCache/FMDBClient.m"
+                  timestampString = "560858013.06501"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
