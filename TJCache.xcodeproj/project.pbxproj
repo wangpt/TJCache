@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4DA2AF217239D200FA12C4 /* RealmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DA2AE217239D200FA12C4 /* RealmController.m */; };
+		2B4DA2B221723CA600FA12C4 /* RLMPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DA2B121723CA600FA12C4 /* RLMPersonModel.m */; };
 		2B567358215A7B1400295E06 /* MRCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B567357215A7B1400295E06 /* MRCoreDataController.m */; };
 		2B97D67C2164702A007346AE /* TJDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB49745216384CF00F45B7B /* TJDataModel.xcdatamodeld */; };
 		2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B97D68021647BBA007346AE /* MRCoreDataClient.m */; };
@@ -38,6 +40,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B4DA2AD217239D200FA12C4 /* RealmController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealmController.h; sourceTree = "<group>"; };
+		2B4DA2AE217239D200FA12C4 /* RealmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmController.m; sourceTree = "<group>"; };
+		2B4DA2B021723CA600FA12C4 /* RLMPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLMPersonModel.h; sourceTree = "<group>"; };
+		2B4DA2B121723CA600FA12C4 /* RLMPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLMPersonModel.m; sourceTree = "<group>"; };
 		2B567356215A7B1400295E06 /* MRCoreDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCoreDataController.h; sourceTree = "<group>"; };
 		2B567357215A7B1400295E06 /* MRCoreDataController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCoreDataController.m; sourceTree = "<group>"; };
 		2B97D67F21647BBA007346AE /* MRCoreDataClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCoreDataClient.h; sourceTree = "<group>"; };
@@ -107,6 +113,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B4DA2AC2172375500FA12C4 /* RealmClient */ = {
+			isa = PBXGroup;
+			children = (
+				2B4DA2AD217239D200FA12C4 /* RealmController.h */,
+				2B4DA2AE217239D200FA12C4 /* RealmController.m */,
+				2B4DA2B021723CA600FA12C4 /* RLMPersonModel.h */,
+				2B4DA2B121723CA600FA12C4 /* RLMPersonModel.m */,
+			);
+			name = RealmClient;
+			sourceTree = "<group>";
+		};
 		2B567365215A805600295E06 /* MRCoreDataClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +235,7 @@
 		A88FC4761D8167EC004D74FE /* TJCache */ = {
 			isa = PBXGroup;
 			children = (
+				2B4DA2AC2172375500FA12C4 /* RealmClient */,
 				2BAAF0EC21416C3200008BBA /* Model */,
 				2B567365215A805600295E06 /* MRCoreDataClient */,
 				2BBB573C2142C39E00754515 /* PINCacheClient */,
@@ -399,6 +417,7 @@
 				2BB497832163A74A00F45B7B /* PersonInfoEntity+CoreDataClass.m in Sources */,
 				2BDB77F221421BD600F3A537 /* YYCacheDemoController.m in Sources */,
 				2BBB573F2142C3E200754515 /* PINCacheDemoController.m in Sources */,
+				2B4DA2B221723CA600FA12C4 /* RLMPersonModel.m in Sources */,
 				2B97D68121647BBA007346AE /* MRCoreDataClient.m in Sources */,
 				2BCAF9E321662AF4008F249D /* FMDBController.m in Sources */,
 				A88FC4941D8167FD004D74FE /* TJUserDefaults.m in Sources */,
@@ -410,6 +429,7 @@
 				2BDE7B21215891A600E27F78 /* YYCacheClient.m in Sources */,
 				2BCAF9E621662FB7008F249D /* FMDBClient.m in Sources */,
 				A80BF6BB1D816D9C00808C9B /* TJKeyedArchive.m in Sources */,
+				2B4DA2AF217239D200FA12C4 /* RealmController.m in Sources */,
 				A8C748C61D87D0BF00B5F947 /* TJNetworkCache.m in Sources */,
 				2BBB57422142C4C800754515 /* PINCacheDemoManager.m in Sources */,
 				2BB497842163A74A00F45B7B /* PersonInfoEntity+CoreDataProperties.m in Sources */,

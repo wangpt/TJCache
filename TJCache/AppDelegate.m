@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TJExampleViewController.h"
 #import "TJKeychain.h"
-
+#import <Realm/Realm.h>
 #import <MagicalRecord/MagicalRecord.h>
 //#import <MagicalRecord/MagicalRecord+ShorthandMethods.h>
 //#import <MagicalRecord/MagicalRecordShorthandMethodAliases.h>
@@ -31,9 +31,38 @@
     
     // 对Magical Record的初始化
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"User.sqlite"];
+    
+
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)creatDataBaseWithName:(NSString *)databaseName
+{
+    NSArray *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [docPath objectAtIndex:0];
+    NSString *filePath = [path stringByAppendingPathComponent:databaseName];
+    NSLog(@"数据库目录 = %@",filePath);
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    config.fileURL = [NSURL URLWithString:filePath];
+//    config.objectClasses = @[];
+    config.readOnly = NO;
+    int currentVersion = 1.0;
+    config.schemaVersion = currentVersion;
+    
+    config.migrationBlock = ^(RLMMigration *migration , uint64_t oldSchemaVersion) {
+        // 这里是设置数据迁移的block
+        if (oldSchemaVersion < currentVersion) {
+        }
+    };
+    
+    [RLMRealmConfiguration setDefaultConfiguration:config];
+    
+}
+
+
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {

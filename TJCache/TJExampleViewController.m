@@ -57,7 +57,10 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
                   
                   @[@{TJButtonName:@"Show MRCoreDataClient",
                       TJButtonInfo:@"based on MagicalRecord",
-                      TJButtonSelector:@"showMRCoreDataClient"}]];
+                      TJButtonSelector:@"showMRCoreDataClient"}],
+                  @[@{TJButtonName:@"Show RealmClient",
+                      TJButtonInfo:@"based on Realm",
+                      TJButtonSelector:@"showRealmClient"}]];
     
    //MRCoreDataController
 }
@@ -132,7 +135,11 @@ static NSString *const TJButtonSelector = @"TJButtonSelector";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-
+- (void)showRealmClient{
+    
+    UIViewController *vc = [[NSClassFromString(@"RealmController") alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)showOkayCancelActionSheet {
 
 }
